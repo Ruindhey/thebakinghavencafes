@@ -1,0 +1,199 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+		    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Our Team Member</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="https://kit.fontawesome.com/badaf22489.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f1e7; /* Cozy brown background */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+       .container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        .slider-container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .card {
+      width: 300px;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #8b5e3c; /* Cozy brown card background */
+      color: #fff; /* White text */
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      height: 70%;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      font-size: 20px;
+      color: #8b5e3c; /* Cozy brown color */
+    }
+
+    
+    </style>
+
+    <body>
+        <div class="topnav">
+            <img src="images/logo company.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.htlm">Team</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    
+        <br>
+        <div class="container">
+        <div class="slider-container" >
+            <div class="slider">
+                <div class="card">
+                <img src="images/husna.jpeg" alt="Card 1">
+                <h2>General Manager</h2>
+                 <p>Qistina Binti Rohani</p>
+                </div>
+                <div class="card">
+                <img src="image2.jpg" alt="Card 2">
+                <h2>Administration Manager</h2>
+                <p>Noordini Akilah Binti Muhyidin</p>
+                </div>
+                <div class="card">
+                <img src="images/husna.jpeg" alt="Card 3">
+                <h2>General Manager</h2>
+                <p>Qistina Binti Rohaimi</p>
+                </div>
+                <div class="card">
+                <img src="images/dini.jpg" alt="Card 4">
+                <h2>Administration Manager</h2>
+                <p>NoorDini Akilah Binti Muhyidin</p>
+                </div>
+                <div class="card">
+                <img src="images/aina.jpeg" alt="Card 5">
+                <h2>Marketing Manager</h2>
+                <p>Aina Ilyani Binti Bijasari</p>
+                </div>
+                <div class="card">
+                  <img src="images/sarah.jpeg" alt="Card 6">
+                  <h2>Operation Manager</h2>
+                  <p>Sarah Qistina Binti Mohd Yasir</p>
+                </div>
+                <div class="card">
+                  <img src="images/dayang.jpeg" alt="Card 7">
+                  <h2>Financial Manager</h2>
+                  <p>Dayang Ruind Khuzandria Binti Mohd Nasir</p>
+                </div>
+                <div class="card">
+                  <img src="images/husna.jpeg" alt="Card 8">
+                  <h2>General  Manager</h2>
+                  <p>Qistina Binti Rohaimi</p>
+                </div>
+            </div>
+        <!-- Add more cards as needed -->
+        </div>
+        </div>
+      <div class="controls">
+        <div class="prev" onclick="prevSlide()">&#9665; Prev</div>
+        <div class="next" onclick="nextSlide()">Next &#9655;</div>
+      </div>
+    </div>
+    
+    <script>
+      const slider = document.querySelector('.slider');
+      let slideIndex = 0;
+    
+      function showSlide(index) {
+        const slideWidth = document.querySelector('.card').offsetWidth;
+        slider.style.transform = `translateX(${-slideWidth * index}px)`;
+      }
+    
+      function nextSlide() {
+        slideIndex = (slideIndex + 1) % slider.children.length;
+        showSlide(slideIndex);
+      }
+    
+      function prevSlide() {
+        slideIndex = (slideIndex - 1 + slider.children.length) % slider.children.length;
+        showSlide(slideIndex);
+      }
+    </script>
+    
+    <br>
+                <div class="footer">
+                    <div class="col-1">
+                        <h3>MENU</h3>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="team.html">Team</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="col-2">
+                        <h3>Opening Hours</h3>
+                        <p>Monday - Sunday:10.00a.m - 10.00p.m</p>
+                        <p>We are open every day</p>
+                        <br>
+                        <h3>HAVEN CAFE</h3>
+                        <P>Copyright ©2024 The Baking Haven Cafe | <br> All rights reserved</P>
+                       
+                    </div>
+                    <div class="col-3">
+                        <h3>Contact</h3>
+                        <p>Lot G-03A, Ground Floor,<br> MyTown Shopping Centre</p>
+                        <div class="socialIcons">
+                            <a href="tel:0366779876"><i class="fa-solid fa-phone"></i></a>
+                            <a href="mailto:thebakeryhavencafe@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/aishah.zali.5872?mibextid=2JQ9oc"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/akilms_/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@rui__ned_"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                       
+                    </div>
+                </div>
+    </body>
+</html>
